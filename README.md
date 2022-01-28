@@ -40,6 +40,13 @@ BOT_PIC
 -------------------------------------------------------------------------------------------------------------------------------------------
 COMMANDS                                        ==     EXPLANATION
 -------------------------------------------------------------------------------------------------------------------------------------------
-1./start                                        ==     start the bot
-2./help                                         ==     help
+1./start                                              start the bot
+2./help                                                   help
 -------------------------------------------------------------------------------------------------------------------------------------------
+  <summary> • DEPLOYM• </summary>
+
+### The Easy Way
+
+<h4>⚜️ DEPLOY TO HEROKU ⚜️</h4>
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/SANTHOSHPODILIGITHHUB/SANTHOSHPODILI.git)
+
