@@ -1,8 +1,22 @@
 {
-  "name": "Start on Heroku: Node.js",
-  "description": "A barebones Node.js app using Express 4",
-  "repository": "https://github.com/heroku/node-js-getting-started",
-  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/main/public/node.svg",
-  "keywords": ["node", "express", "heroku"],
+  "name": "santhosh chat bot",
+  "description": "telegram chat bot",
+  "repository": "https://github.com/SANTHOSHPODILIGITHHUB/SANTHOSHPODILI.git",
+  "logo": "https://te.legra.ph/file/ffbb096d10dd36ad45337.jpg",
+  "keywords": ["chat", "chatting", "telegram"],
   "image": "heroku/nodejs"
+  "env": {
+    "BOT_TOKEN": {
+      "description": "A bot token from @BotFather",
+      "required": true
+    },
+    "API_ID": {
+      "description": "App ID from my.telegram.org/apps",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "App hash from my.telegram.org/apps",
+      "required": true
+    }
+  }
 }
