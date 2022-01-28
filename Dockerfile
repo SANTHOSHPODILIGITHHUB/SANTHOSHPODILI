@@ -1,4 +1,3 @@
-01:00 ●━━━━────── 3:04 ⇆ㅤ◁ㅤㅤ❚❚, [1/28/2022 5:59 AM]
 FROM python:3.10.1-slim-buster
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install git curl python3-pip ffmpeg -y
