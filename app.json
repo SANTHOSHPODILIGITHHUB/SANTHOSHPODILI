@@ -5,7 +5,6 @@
   "logo": "https://te.legra.ph/file/ffbb096d10dd36ad45337.jpg",
   "keywords": ["chat", "chatting", "telegram"],
   "image": "heroku/nodejs"
- },
   "env": {
     "BOT_TOKEN": {
       "description": "A BOT TOKEN @Botfather.",
@@ -14,11 +13,10 @@
     "API_ID": {
       "description": "ENTER YOUR API_ID.",
       "required": "true"
-    }
-  },
-  "API_HASH": {
-     "description": "ENTER YOUR API_HASH.",
-     "required": "true"
+    },        
+    "API_HASH": {
+      "description": "ENTER YOUR API_HASH.",
+      "required": "true"
     }
   }
 }
