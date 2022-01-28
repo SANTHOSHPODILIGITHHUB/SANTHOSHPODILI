@@ -2,7 +2,8 @@ import logging
 from telegram.ext import *
 import responses
 
-API_KEY = '5122625103:AAFzQysPcE0VC7cDRDpJPPihLS31ZOm4rMQ'
+from config import API_ID, API_HASH, BOT_TOKEN
+
 
 # Set up the logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s %(message)s', level=logging.INFO)
@@ -53,6 +54,15 @@ if __name__ == '__main__':
 
     # Log all errors
     dp.add_error_handler(error)
+    
+    
+    bot = Bot(
+        ":memory:",
+        API_ID,
+        API_HASH,
+        bot_token=BOT_TOKEN,
+        plugins=dict(root="handlers")
+    )
 
     # Run the bot
     updater.start_polling(1.0)
