@@ -22,9 +22,3 @@ def start(bot, message):
     def command2(bot, messager):
         message.reply_text("This is santhu bot's help section.")
 
-
-
-
-
-
-"
