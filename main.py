@@ -1,71 +1,14 @@
-import logging
-from telegram.ext import *
-import responses
-
-from config import API_ID, API_HASH, BOT_TOKEN
+from telegram import Update
+from telegram.ext import Updater, CommandHandler, CallbackContext
 
 
-# Set up the logging
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s %(message)s', level=logging.INFO)
-logging.info('Starting Bot...')
+def hello(update: Update, context: CallbackContext) -> None:
+    update.message.reply_text(f'Hello {update.effective_user.first_name}')
 
 
-def start_command(update, context):
-    update.message.reply_text('https://te.legra.ph/file/e719f19bbeeb7f55e6202.jpg '
-                              'hello iam chat bot deployed on python server deployed by: @santhu_music_bot')
+updater = Updater('5193082647:AAHzzI0xampOzGnn84Xiha59AskGRbjXlmM')
 
+updater.dispatcher.add_handler(CommandHandler('hello', hello))
 
-
-
-def help_command(update, context):
-    update.message.reply_text('Try typing anything and I will do my best to respond!')
-
-
-
-def custom_command(update, context):
-    update.message.reply_text('This is a custom command, you can add whatever text you want here.')
-
-
-def handle_message(update, context):
-    text = str(update.message.text).lower()
-    response = responses.get_response(text)
-    logging.info(f'user ({update.message.chat.id}) says: {text}')
-
-    # Bot response
-    update.message.reply_text(response)
-
-
-def error(update, context):
-    # Logs errors
-    logging.error(f'update {update} caused error {context.error}')
-
-
-if __name__ == '__main__':
-    updater = Updater(API_KEY, use_context=True)
-    dp = updater.dispatcher
-
-    # Commands
-    dp.add_handler(CommandHandler('start', start_command))
-    dp.add_handler(CommandHandler('help', help_command))
-    dp.add_handler(CommandHandler('custom', custom_command))
-
-    # Messages
-    dp.add_handler(MessageHandler(Filters.text, handle_message))
-
-    # Log all errors
-    dp.add_error_handler(error)
-    
-    
-    bot = Bot(
-        ":memory:",
-        API_ID,
-        API_HASH,
-        bot_token=BOT_TOKEN,
-        plugins=dict(root="handlers")
-    )
-
-    # Run the bot
-    updater.start_polling(1.0)
-    updater.idle()
-
-
+updater.start_polling()
+updater.idle()
