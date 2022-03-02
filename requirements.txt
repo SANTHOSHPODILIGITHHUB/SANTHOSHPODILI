@@ -1,0 +1,8 @@
+heroku3
+pyrogram
+tgcrypto
+motor
+pyrogram==1.0.7
+pyromod
+requests
+Pillow
