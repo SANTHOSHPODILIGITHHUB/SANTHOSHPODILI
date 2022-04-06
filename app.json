@@ -1,21 +1,28 @@
 {
-  "name": "santhu",
-  "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
-  "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/Blackcat3046/Balckcat-musix",
-  "stack": "container",
-  "env": {
-    "BOT_TOKEN": {
-      "description": "A BOT TOKEN @Botfather.",
-      "required": "true"
+    "name": "Santhosh",
+    "description": "Hi iam your pyrogram bot",
+    "keywords": [
+        "Pyrogram\nPython"
+    ],
+    "repository": "https://github.com/Santhupodili/santhu-pyrogram-bot.git",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "ENTER YOU TOKEN",
+            "required": "True"
+        },
+        "API_ID": {
+            "description": "",
+            "required": "True"
+        },
+        "API_HASH": {
+            "description": "",
+            "required": "True"
+        }
     },
-    "API_ID": {
-      "description": "ENTER YOUR API_ID.",
-      "required": "true"
-    },        
-    "API_HASH": {
-      "description": "ENTER YOUR API_HASH.",
-      "required": "true"
-     }
-  }
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
 }
