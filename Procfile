@@ -1,1 +1,1 @@
-worker: python3 -m SanthuPyrogrambot
+worker: python3 - main
