@@ -4,6 +4,13 @@ import responses
 
 from config import API_ID, API_HASH, BOT_TOKEN
 
+bot=Client(
+     "Pyrogram Bot", 
+     bot_token=os.environ["BOT_TOKEN"],
+     api_id=int(os.environ["API_ID"]), 
+     api_hash=os.environ["API_HASH"],
+) 
+
 
 # Set up the logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s %(message)s', level=logging.INFO)
@@ -56,16 +63,4 @@ if __name__ == '__main__':
     dp.add_error_handler(error)
     
     
-    bot = Bot(
-        ":memory:",
-        API_ID,
-        API_HASH,
-        bot_token=BOT_TOKEN,
-        plugins=dict(root="handlers")
-    )
-
-    # Run the bot
-    updater.start_polling(1.0)
-    updater.idle()
-
-
+    bot.run()
